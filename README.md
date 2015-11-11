@@ -29,7 +29,7 @@ heroku restart
 heroku buildpacks
 
 ## Heroku multi buildpack para poder usar o Node e PHP
-heroku create --buildpack https://github.com/heroku/heroku-buildpack-multi
+heroku buildpacks:set https://github.com/heroku/heroku-buildpack-multi.git
 
 ## Altera o buildpack padrão para PHP
 heroku buildpacks:set https://github.com/heroku/heroku-buildpack-php
