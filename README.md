@@ -28,12 +28,15 @@ heroku restart
 ## Lista buildpacks da aplicação
 heroku buildpacks
 
+## Heroku multi buildpack para poder usar o Node e PHP
+heroku create --buildpack https://github.com/heroku/heroku-buildpack-multi
+
 ## Altera o buildpack padrão para PHP
-heroku buildpacks:set https:#github.com/heroku/heroku-buildpack-php
+heroku buildpacks:set https://github.com/heroku/heroku-buildpack-php
 
 ## Adiciona o NodeJs como um segundo buildpack, para com isso executar comomandos como "bower install" para instalar as dependências
-heroku buildpacks:add --index 2 https:#github.com/heroku/heroku-buildpack-nodejs
+heroku buildpacks:add --index 2 https://github.com/heroku/heroku-buildpack-nodejs
 
 ## Remover um BuildPack
 heroku config:unset BUILDPACK_URL
-heroku config:unset https:#github.com/heroku/heroku-buildpack-nodejs
+heroku config:unset https://github.com/heroku/heroku-buildpack-nodejs
