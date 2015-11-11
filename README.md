@@ -1,5 +1,5 @@
 # heroku-commands
-Lista de comando da CLI da Heroku
+Lista de comandos da CLI da Heroku
 
 ## Faz o login na heroku, para poder fazer qualquer comando
 heroku login
