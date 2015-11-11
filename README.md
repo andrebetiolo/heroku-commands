@@ -1,6 +1,9 @@
 # heroku-commands
 Lista de comando da CLI da Heroku
 
+## Faz o login na heroku, para poder fazer qualquer comando
+heroku login
+
 ## Faz executar o comando "bower install" depois do push/deploy no servidor baixando as dependências do Bower
 echo '{"name": "multitest", "scripts": {"compile": ["bower install"] } }' > composer.json
 
@@ -9,6 +12,9 @@ echo 'web: vendor/bin/heroku-php-apache2' > Procfile
 
 ## Criação do Procfile com uma pasta padrão de execução da Heroku
 echo 'web: vendor/bin/heroku-php-apache2 www/' > Procfile
+
+## Lista os aplicativos do usuário logado
+heroku apps
 
 ## Alterar nome do aplicativo
 heroku apps:rename novoNome
