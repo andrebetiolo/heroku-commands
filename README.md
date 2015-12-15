@@ -3,6 +3,9 @@ Lista de comandos da CLI da Heroku
 
 ### Faz o login na heroku, para poder fazer qualquer comando
     heroku login
+    
+### Clona o repositório "nome-do-repositorio" da conta logada
+    heroku git:clone -a nome-do-repositorio
 
 ### Faz executar o comando "bower install" depois do push/deploy no servidor baixando as dependências do Bower
     echo '{"name": "multitest", "scripts": {"compile": ["bower install"] } }' > composer.json
